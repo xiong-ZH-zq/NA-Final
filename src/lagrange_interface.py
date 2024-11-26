@@ -81,7 +81,7 @@ def update_graph(n_clicks, x_values, y_values):
         y_interp = [float(lagrange_poly.evalf(subs={x: xi})) for xi in x_interp]  # 转换为标准 Python 数字类型
 
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=x_values, y=y_values, mode='markers+lines', name='输入点'))
+        fig.add_trace(go.Scatter(x=x_values, y=y_values, mode='markers', name='输入点'))
         fig.add_trace(go.Scatter(x=x_interp, y=y_interp, mode='lines', name='插值曲线'))
         fig.update_layout(title="Lagrange 插值", xaxis_title="x", yaxis_title="y")
 
